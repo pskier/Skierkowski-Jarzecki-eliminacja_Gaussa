@@ -9,14 +9,14 @@ int  backsubst(Matrix *x, Matrix *mat, Matrix *b) {
 	int a = mat->r -1;
 	int c=mat->c-1;
 
-	if(a!=b)
+	if(a!=c)
 		return 2;//zwraca 2 dla nieodpowiedniego rozmiaru macierzy
 	
 	int pom=c;
 	double sum=0;
 	int i,j;
 	for (i =a; a >=0; a--) {
-		for(j=b;j<p;j--){
+		for(j=c;j<pom;j--){
 			sum=(mat->data[i][j])*(x->data[j][0]);
 			b->data[i][0]-=sum;
 		}
