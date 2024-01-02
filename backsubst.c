@@ -9,7 +9,7 @@ int  backsubst(Matrix *x, Matrix *mat, Matrix *b) {
 	int a = mat->r -1;
 	int c=mat->c-1;
 
-	if(a!=c)
+	if(a!=c || c!=b->c-1)
 		return 2;//zwraca 2 dla nieodpowiedniego rozmiaru macierzy
 	
 	int pom=c;
