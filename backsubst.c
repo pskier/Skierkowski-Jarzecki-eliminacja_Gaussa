@@ -15,7 +15,7 @@ int  backsubst(Matrix *x, Matrix *mat, Matrix *b) {
 	int pom=c;
 	double sum=0;
 	int i,j;
-	for (i =a; a >=0; a--) {
+	for (i =a; i >=0; i--) {
 		for(j=c;j<pom;j--){
 			sum=(mat->data[i][j])*(x->data[j][0]);
 			b->data[i][0]-=sum;
